@@ -1,4 +1,3 @@
-/* Font icon colors, etc., are tedious and reside in another stylesheet */
 * {
   box-sizing: border-box;
 }
@@ -29,7 +28,7 @@ body {
     padding:5px 10px;
     float: right;
   }
-  a:hover {color:green;}
+  a:hover {color:rgba(222, 90, 21, .85);}
 }
 .page-wrap {
   margin: 0;
@@ -60,13 +59,19 @@ p {
   align-items: center;
 }.clickable {
   transform: translateZ(0);
+  p {
+    color: #666;
+    font-size: .8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: .05em;
+  }
 }
-
 a {
   color: rgb(222, 68, 21);
   text-decoration: none;
 }
-
 a:hover {
   color: rgb(0, 116, 217);
 }
@@ -79,8 +84,8 @@ a:hover {
 }
 
 #headshot {
-  width: 220px;
-  padding: .5em;
+  width: 180px;
+  padding: .3em;
   margin-bottom: -3em;
   border-radius: 50%;
   background: rgba(255, 255, 255, .4);
@@ -97,7 +102,7 @@ a:hover {
 
 .card {
   position: relative;
-  padding: 25vh 15px 25vh 2px;
+  padding: 15vh 15px 25vh 2px;
   min-height: 100%;
   max-width: 100vw;
   transform-style: inherit;
@@ -120,7 +125,7 @@ a:hover {
   a {padding: 5px 15px;font-size:30px;}
 }
 #card1 {
-  background: linear-gradient(rgba(0, 116, 217, .75), rgba(222, 68, 21, .85)), url(https://static.pexels.com/photos/42154/pexels-photo-42154.jpeg) center/cover;
+  background: linear-gradient(rgba(0, 55, 217, .75), rgba(222, 70, 21, .85)), url(https://static.pexels.com/photos/42154/pexels-photo-42154.jpeg) center/cover;
   transform: translateZ(-1px) scale(2);
   z-index: -1;
 }
@@ -227,17 +232,12 @@ span.title {
 .signature {
   text-align: center;
   margin-top: 3.5em;
-}
-
-.signature p {
   color: #666;
   font-size: .8em;
   font-weight: bold;
   text-transform: uppercase;
   font-style: italic;
   letter-spacing: .2em;
-  margin: 0;
-  padding: 0;
 }
 
 .signature img {
