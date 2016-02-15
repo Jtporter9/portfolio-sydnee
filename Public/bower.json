@@ -1,0 +1,23 @@
+{
+  "name": "Public",
+  "homepage": "https://github.com/Jtporter9/portfolio-sydnee",
+  "authors": [
+    "J. Tanner Porter <jtporter9@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "angular": "^1.5.0",
+    "angular-ui-router": "^0.2.18"
+  }
+}
