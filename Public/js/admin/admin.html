@@ -1,7 +1,25 @@
 <div class="header"><h2>Admin view</h2></div>
 <div class="admin-container">
+  <div><big>Headshot picture</big></div>
+  <input value="{{headShot}}"  type="text">
   <div class="intro-container">
-    <big>Intro</big>
+    <div><big>Intro</big></div>
     <textarea>{{intro}}</textarea>
+    <div><big>My Work Section</big></div>
+    <div ng-repeat="proj in projects" class="projects">
+      <big>{{proj.number}}.</big>
+      <input value="{{proj.name}}" type="text">
+      <input value="{{proj.link}}" type="text">
+      <input value="{{proj.picture}}" type="text">
+    </div>
+
+
+    <div><big>Bio section</big></div>
+    <input value="{{bioTitle}}" type="text">
+    <textarea>{{p1}}</textarea>
+    <textarea>{{p2}}</textarea>
+    <textarea>{{p3}}</textarea>
+    <textarea>{{p4}}</textarea>
+    <textarea>{{p5}}</textarea>
   </div>
 </div>
