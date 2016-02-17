@@ -246,7 +246,14 @@ span.title {
 }
 ////Admin side/////
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-.header {
+.admin-header {
+  text-align: center;
+  position:absolute;
+  top: 0;
+  border-bottom: 1px solid black;
+  width:100%;
+  z-index: 99999;
+  background-color: rgba(154, 154, 154, 0.5);
   h2 {
     text-align: center;
     font-size:30px;
@@ -259,11 +266,12 @@ span.title {
   // margin:10% 1% 1% 1%;
   position: absolute;
   top:15%;
-  border:1px solid white;
+  // border:1px solid white;
   width:100%;
   color:white;
   padding:10px;
-  input {width:30%;  margin:10px;}
+  input {width:29%;  margin:10px 5px;}
+  textarea {margin:10px;}
 }
 .intro-container {
   // width:45%;
@@ -272,9 +280,30 @@ span.title {
     border-radius: 5px;
     font-size: 18px;
     width:80%;
-    height:180px;
+    height:200px;
   }
 }
 .projects {
   // margin:10px;
+}
+.save {
+  font-size: 25px;
+}
+.add-proj {
+  background-color: rgba(90, 90, 90, 0.95);
+  width:60%;
+  margin:5% 20%;
+  position: absolute;
+  top:10%;
+  height: 250px;
+  border-radius: 5px;
+  border: 1px solid #de4415;
+}
+.btns-holder {
+  font-size: 35px;
+  i {color:green; margin:10px;}
+  i:hover {color:blue}
+  i:nth-child(2) {color:#de4415}
+  i:nth-child(2):hover {color:black;}
+
 }

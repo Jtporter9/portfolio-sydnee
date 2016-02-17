@@ -1,25 +1,75 @@
-<div class="header"><h2>Admin view</h2></div>
+<div class="admin-header">
+  <h2>Sydnee's Admin view <i class="fa fa-lock"></i>
+</h2></div>
 <div class="admin-container">
-  <div><big>Headshot picture</big></div>
-  <input value="{{headShot}}"  type="text">
+
+
+  <div><big>Headshot picture <i class="fa fa-picture-o"></i>
+</big></div>
+  <hr>
+  <div><span>current headshot picture:</span></div>
+  <div><span>{{headShot}}</span></div>
+  <input placeholder="{{headShot}}" type="text">
   <div class="intro-container">
     <div><big>Intro</big></div>
     <textarea>{{intro}}</textarea>
-    <div><big>My Work Section</big></div>
+
+
+    <div>
+      <big>My Work Section
+        <i class="fa fa-suitcase"></i>
+        <a ng-click="showAddProjBox()" href=""><i class="fa fa-plus"></i></a>
+        <a ng-click="showTrash()" href="">
+          <i class="fa fa-minus"></i>
+        </a>
+      </big>
+      <hr>
+    </div>
     <div ng-repeat="proj in projects" class="projects">
-      <big>{{proj.number}}.</big>
-      <input value="{{proj.name}}" type="text">
-      <input value="{{proj.link}}" type="text">
-      <input value="{{proj.picture}}" type="text">
+      <big>
+        <a ng-show="showTrashCan" href="">
+          <i class="fa fa-trash"></i> </a>
+          {{proj.number}}.
+      </big>
+      <input placeholder="{{proj.name}}" type="text">
+      <i class="fa fa-link"></i>
+      <input placeholder="{{proj.link}}" type="text">
+      <i class="fa fa-picture-o"></i>
+      <input placeholder="{{proj.picture}}" type="text">
+    </div>
+
+    <div ng-show="showAddProj" class="add-proj">
+      <h2>Add a project</h2>
+      <div>
+        <input ng-model="newProj.name" placeholder="new name..." type="text">
+      </div>
+      <div>
+        <input ng-model="newProj.link" placeholder="new video link..." type="text">
+      </div>
+      <div>
+        <input ng-model="newProj.picture" placeholder="new picture link..." type="text">
+      </div>
+      <div class="btns-holder">
+        <i ng-click="addNewProj()" class="fa fa-check"></i>
+        <i ng-click="showAddProjBox()" class="fa fa-close"></i>
+      </div>
     </div>
 
 
-    <div><big>Bio section</big></div>
-    <input value="{{bioTitle}}" type="text">
+    <div>
+      <big>Bio section
+        <i class="fa fa-user"></i>
+      </big>
+    </div>
+    <hr>
+    <div><span>current bio title:</span></div>
+    <div><span>{{bioTitle}}</span></div>
+    <input placeholder="{{bioTitle}}" type="text">
     <textarea>{{p1}}</textarea>
     <textarea>{{p2}}</textarea>
     <textarea>{{p3}}</textarea>
     <textarea>{{p4}}</textarea>
     <textarea>{{p5}}</textarea>
   </div>
+  <big class="save"><a ng-click="saveChanges()" href="">Save changes <i class="fa fa-floppy-o"></i></a></big>
 </div>
