@@ -25,9 +25,10 @@
       </big>
       <hr>
     </div>
+
     <div ng-repeat="proj in projects" class="projects">
       <big>
-        <a ng-show="showTrashCan" href="">
+        <a ng-click="deleteProj($index)" ng-show="showTrashCan" href="">
           <i class="fa fa-trash"></i> </a>
           {{proj.number}}.
       </big>

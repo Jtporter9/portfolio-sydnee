@@ -13,9 +13,12 @@ angular.module('portfolio').controller('adminCtrl', function($scope, mainService
   $scope.showTrash = function() {
     $scope.showTrashCan = !$scope.showTrashCan;
   };
-  
+
   $scope.showAddProjBox = function() {
     $scope.showAddProj = !$scope.showAddProj;
+  };
+  $scope.deleteProj= function(index) {
+    mainService.projects.splice(index, 1);
   };
 
   $scope.addNewProj = function() {
