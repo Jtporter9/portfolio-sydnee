@@ -7,12 +7,12 @@
   <div><big>Headshot picture <i class="fa fa-picture-o"></i>
 </big></div>
   <hr>
-  <div><span>current headshot picture:</span></div>
-  <div><span>{{headShot}}</span></div>
-  <input placeholder="{{headShot}}" type="text">
+  <div><span>Current headshot picture:</span></div>
+  <div><span>{{headShot.string}}</span></div>
+  <input placeholder="{{headShot.string}}" type="text">
   <div class="intro-container">
     <div><big>Intro</big></div>
-    <textarea>{{intro}}</textarea>
+    <textarea>{{intro.string}}</textarea>
 
 
     <div>
@@ -63,14 +63,14 @@
       </big>
     </div>
     <hr>
-    <div><span>current bio title:</span></div>
-    <div><span>{{bioTitle}}</span></div>
-    <input placeholder="{{bioTitle}}" type="text">
-    <textarea>{{p1}}</textarea>
-    <textarea>{{p2}}</textarea>
-    <textarea>{{p3}}</textarea>
-    <textarea>{{p4}}</textarea>
-    <textarea>{{p5}}</textarea>
+    <div><span>Current bio title:</span></div>
+    <div><span>{{bioTitle.string}}</span></div>
+    <input placeholder="{{bioTitle.string}}" type="text">
+    <textarea>{{p1.string}}</textarea>
+    <textarea>{{p2.string}}</textarea>
+    <textarea>{{p3.string}}</textarea>
+    <textarea>{{p4.string}}</textarea>
+    <textarea>{{p5.string}}</textarea>
   </div>
   <big class="save"><a ng-click="saveChanges()" href="">Save changes <i class="fa fa-floppy-o"></i></a></big>
 </div>

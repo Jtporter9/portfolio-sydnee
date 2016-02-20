@@ -6,7 +6,10 @@ var express      = require('express')
   , app          = express()
   , port         = 3000
 // Mongoose //
-  , mongoUri = "mongodb://localhost:27017/Chatroom";
+  , mongoUri     = "mongodb://localhost:27017/Chatroom"
+// Refs //
+  , stringsCtrl      = require('./strings/stringsCtrl')
+  , projectsCtrl     = require('./projects/projCtrl')
 
 // Express Middleware //
 app.use(bodyParser.json());
@@ -19,6 +22,17 @@ mongoose.connection.once('open', function () {
 });
 
 app.use(express.static(__dirname + './../Public'));
+
+// Strings Endpoints //
+app.post('/api/strings', stringsCtrl.addString);
+app.get('/api/strings', stringsCtrl.getString);
+app.delete('/api/strings/:id', stringsCtrl.deleteString);
+app.put('/api/strings/:id', stringsCtrl.updateString);
+
+// Projects Endpoints //
+app.post('/api/projects', projectsCtrl.addProject);
+app.get('/api/projects', projectsCtrl.getProject);
+app.delete('/api/projects', projectsCtrl.deleteProject);
 
 // PORT //
 app.listen(port, function () {
