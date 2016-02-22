@@ -24,10 +24,10 @@ mongoose.connection.once('open', function () {
 app.use(express.static(__dirname + './../Public'));
 
 // Strings Endpoints //
-app.post('/api/strings', stringsCtrl.addString);
-app.get('/api/strings', stringsCtrl.getString);
-app.delete('/api/strings/:id', stringsCtrl.deleteString);
-app.put('/api/strings/:id', stringsCtrl.updateString);
+app.post('/api/strings', stringsCtrl.addStrings);
+app.get('/api/strings', stringsCtrl.getStrings);
+app.delete('/api/strings/:id', stringsCtrl.deleteStrings);
+app.put('/api/strings/:id', stringsCtrl.updateStrings);
 
 // Projects Endpoints //
 app.post('/api/projects', projectsCtrl.addProject);

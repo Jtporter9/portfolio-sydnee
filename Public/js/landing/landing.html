@@ -19,7 +19,14 @@
       <p class="clickable">{{intro.string}}
         <!-- <a href="https://home.byu.edu/home/">BYU</a> -->
       </p>
+      <p class="clickable icons center">
+        See my full resume
+        <a style="font-size:18px;padding:0px 4px;" href="">Here
+        <i class="fa fa-file-text-o"></i>
+        </a>
+      </p>
       <h2>Social profiles</h2>
+      <hr>
       <div class="icon-block center clickable icons">
         <a href="https://www.facebook.com/sbgunter?fref=ts"><i class="fa fa-facebook-square"></i></a>
         <a href="https://plus.google.com/u/0/101666959590611612383"><i class="fa fa-google-plus"></i></a>
@@ -31,8 +38,8 @@
   </div>
   <div name="myWork" id="card2" class="card">
     <div class="content">
-      <h1>My Work</h1>
-      <p>These are a few of the stories I have done.</p>
+      <h1>My Stories</h1>
+      <!-- <p>These are a few of the stories I have done.</p> -->
       <div class="app-block center clickable">
         <a ng-repeat="proj in projects" href="{{proj.link}}" target="_blank">
           <div class="app" style="background: url({{proj.picture}}) center; background-size: cover;">
@@ -57,8 +64,11 @@
   </div>
   <div name="contact" id="card4" class="card">
     <div class="content">
-      <h1>Contact</h1>
-      <div class="clickable">
+      <h1>
+        Contact Me
+        <i class="fa fa-phone"></i>
+      </h1>
+      <div style="font-size:18px;" class="clickable">
         <p class="p">You can contact me here at the following: </p class="p">
         <p class="p">Phone: <i class="fa fa-phone"></i> 801-372-9584
         </p>

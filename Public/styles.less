@@ -1,3 +1,5 @@
+@sydsCream:rgb(232, 221, 212);
+
 * {
   box-sizing: border-box;
 }
@@ -10,7 +12,7 @@ body {
   padding: 0;
   height: 100%;
   transform-style: preserve-3d;
-  background-color: #000;
+  background-color:#269;
 }
 .header {
   border-bottom: 1px solid black;
@@ -80,6 +82,7 @@ a:hover {
   width: 180px;
   padding: 0.3em;
   margin-bottom: -3em;
+  margin-top: 10px;
   // border-radius: 50%;
   background: rgba(255, 255, 255, .4);
   box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, .4);
@@ -90,6 +93,12 @@ a:hover {
   margin: 0 auto;
   background: rgba(255, 255, 255, .75);
   box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, .4);
+  h1:nth-child(1) {
+    text-align: center;
+    margin: 60px 0 10px 0;
+  }
+  p:nth-child(1) {margin:0px;}
+  h2 {text-align: center;}
 }
 .card {
   position: relative;
@@ -117,19 +126,20 @@ a:hover {
   }
 }
 #card1 {
-  background: linear-gradient(rgba(0, 55, 217, .75), rgba(222, 70, 21, .85)), url("https://static.pexels.com/photos/42154/pexels-photo-42154.jpeg") center/cover;
+  background-color: @sydsCream;
+  // background: linear-gradient(rgba(0, 55, 217, .75),     rgba(247, 247, 247, 0.1)), url("https://static.pexels.com/photos/42154/pexels-photo-42154.jpeg") center/cover;
   transform: translateZ(-1px) scale(2);
   z-index: -1;
 }
 #card2 {
   background-color: #269;
   background-image: radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px), radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px), radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
-  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-size: 700px 550px, 350px 350px, 250px 250px, 150px 150px;
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
   margin: 20em 0 35em;
 }
 #card3 {
-  background-color: black;
+  background-color: @sydsCream;
   background-image: linear-gradient(white 2px, transparent 2px), linear-gradient(90deg, white 2px, transparent 2px), linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .3) 1px, transparent 1px);
   background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
   background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
@@ -137,7 +147,7 @@ a:hover {
   z-index: -1;
 }
 #card4 {
-  background: url("https://static.pexels.com/photos/25372/pexels-photo.jpg") center/cover;
+  background: url("./images/contactSyd.jpeg") center/cover;
   margin-top: 35em;
 }
 /* App image styles */
@@ -230,7 +240,7 @@ span.title {
   input {
     width: 29%;
     margin: 10px 5px;
-    height:40px;
+    height: 40px;
     font-size: 18px;
   }
   textarea {

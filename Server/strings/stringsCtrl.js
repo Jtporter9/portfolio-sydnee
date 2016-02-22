@@ -1,23 +1,31 @@
-var String = require('./stringsModel');
+var Strings = require('./stringsModel');
 
 module.exports = {
-	addString: function (req, res) {
-		var newString = new String(req.body);
-		newString.save(function (err, result) {
-			if (err) return res.status(500).send(err);
-			else res.send(result);
-		});
-	},
-	getString: function (req, res, next) {
-		String.find().then(function (String) {
+
+  addStrings: function (req, res, next) {
+  		console.log(req.body);
+  		new Strings(req.body).save(function (err, data) {
+  			if (err) res.status(500).send(err);
+  			else res.send(data);
+  		});
+  	},
+	// addStrings: function (req, res) {
+	// 	var newStrings = new Strings(req.body);
+	// 	newStrings.save(function (err, result) {
+	// 		if (err) return res.status(500).send(err);
+	// 		else res.send(result);
+	// 	});
+	// },
+	getStrings: function (req, res, next) {
+		Strings.find().then(function (Strings) {
       if (err) {
         res.status(500).send(err);
       } else {
-        res.send(String);
+        res.send(Strings);
       }		})
 	},
-	// findString: function (req, res, next) {
-	// 	String.find().populate('messages').populate('people').exec().then(function (conversations, err) {
+	// findStrings: function (req, res, next) {
+	// 	Strings.find().populate('messages').populate('people').exec().then(function (conversations, err) {
 	// 		if (err) {
 	// 			res.status(500).send(err);
 	// 		} else {
@@ -25,21 +33,21 @@ module.exports = {
 	// 		}
 	// 	})
 	// },
-	updateString: function (req, res, next) {
-		String.findByIdAndUpdate(req.params.id, req.body, function (err, updatedString) {
+	updateStrings: function (req, res, next) {
+		Strings.findByIdAndUpdate(req.params.id, req.body, function (err, updatedStrings) {
 			if (err) {
 				res.status(500).send(err);
 			} else {
-				res.send(updatedString);
+				res.send(updatedStrings);
 			}
 		})
 	},
-	deleteString: function (req, res, next) {
-		String.findByIdAndRemove(req.params.id, req.body, function (err, deletedString) {
+	deleteStrings: function (req, res, next) {
+		Strings.findByIdAndRemove(req.params.id, req.body, function (err, deletedStrings) {
 			if (err) {
 				res.status(500).send(err);
 			} else {
-				res.send(deletedString);
+				res.send(deletedStrings);
 			}
 		});
 	}
