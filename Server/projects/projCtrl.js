@@ -1,13 +1,22 @@
-var Project = require('./projModel.js');
+var Project = require('./projModel');
 
 module.exports = {
-	addProject: function (req, res) {
-		var newProject = new Project(req.body);
-		newProject.save(function (err, result) {
-			if (err) return res.status(500).send(err);
-			else res.send(result);
-		});
-	},
+
+  addProject: function (req, res, next) {
+  		console.log(req.body);
+  		new Project(req.body).save(function (err, data) {
+  			if (err) res.status(500).send(err);
+  			else res.send(data);
+  		});
+  	},
+	// addProject: function (req, res) {
+  //   console.log('addProject firing...');
+	// 	var newProject = new Project(req.body);
+	// 	newProject.save(function (err, result) {
+	// 		if (err) return res.status(500).send(err);
+	// 		else res.send(result);
+	// 	});
+	// },
 	getProject: function (req, res, next) {
 		Project.find().then(function (Project) {
       if (err) {

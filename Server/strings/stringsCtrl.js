@@ -1,4 +1,4 @@
-var String = require('./stringsModel.js');
+var String = require('./stringsModel');
 
 module.exports = {
 	addString: function (req, res) {

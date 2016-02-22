@@ -6,10 +6,10 @@ var express      = require('express')
   , app          = express()
   , port         = 3000
 // Mongoose //
-  , mongoUri     = "mongodb://localhost:27017/Chatroom"
+  , mongoUri     = "mongodb://localhost:27017/SydsPortfolio"
 // Refs //
-  , stringsCtrl      = require('./strings/stringsCtrl')
-  , projectsCtrl     = require('./projects/projCtrl')
+  , stringsCtrl  = require('./strings/stringsCtrl.js')
+  , projectsCtrl = require('./projects/projCtrl.js')
 
 // Express Middleware //
 app.use(bodyParser.json());
@@ -32,7 +32,7 @@ app.put('/api/strings/:id', stringsCtrl.updateString);
 // Projects Endpoints //
 app.post('/api/projects', projectsCtrl.addProject);
 app.get('/api/projects', projectsCtrl.getProject);
-app.delete('/api/projects', projectsCtrl.deleteProject);
+app.delete('/api/projects/:id', projectsCtrl.deleteProject);
 
 // PORT //
 app.listen(port, function () {
