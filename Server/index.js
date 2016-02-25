@@ -3,10 +3,11 @@ var express      = require('express')
   , bodyParser   = require('body-parser')
   , cors         = require('cors')
   , mongoose     = require('mongoose')
+  , env          = process.env.NODE_ENV = process.env.NODE_ENV || 'development'
   , app          = express()
-  , port         = 3000
+  , port         = process.env.PORT || 3000
 // Mongoose //
-  , mongoUri     = "mongodb://localhost:27017/SydsPortfolio"
+  , mongoUri     = "mongodb://localhost:27017/sydsportfolio"
 // Refs //
   , stringsCtrl  = require('./strings/stringsCtrl.js')
   , projectsCtrl = require('./projects/projCtrl.js')
@@ -18,7 +19,7 @@ app.use(cors());
 // Connetions //
 mongoose.connect(mongoUri);
 mongoose.connection.once('open', function () {
-	console.log("Successsfully connected to mongodb");
+	console.log("Successsfully connected to mongodb..");
 });
 
 app.use(express.static(__dirname + './../Public'));

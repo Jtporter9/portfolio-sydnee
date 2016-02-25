@@ -3,10 +3,10 @@ var Project = require('./projModel');
 module.exports = {
 
   addProject: function (req, res, next) {
-  		console.log(req.body);
-  		new Project(req.body).save(function (err, data) {
+  		console.log('REQ.BODY HERE!!.....', req.body);
+  		new Project(req.body).save(function (err, newProj) {
   			if (err) res.status(500).send(err);
-  			else res.send(data);
+  			else res.send(newProj);
   		});
   	},
 	// addProject: function (req, res) {
