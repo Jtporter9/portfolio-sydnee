@@ -4,19 +4,16 @@ module.exports = {
 
   addProject: function (req, res, next) {
   		console.log('REQ.BODY HERE!!.....', req.body);
-  		new Project(req.body).save(function (err, newProj) {
-  			if (err) res.status(500).send(err);
-  			else res.send(newProj);
-  		});
+      //FROM MONGOOSE VIDEO 
+      Project.insert(req.body, function(err, result) {
+        if (err)res.send(err);
+        else res.json(result);
+      })
+  		// new Project(req.body).save(function (err, newProj) {
+  		// 	if (err) res.status(500).send(err);
+  		// 	else res.send(newProj);
+  		// });
   	},
-	// addProject: function (req, res) {
-  //   console.log('addProject firing...');
-	// 	var newProject = new Project(req.body);
-	// 	newProject.save(function (err, result) {
-	// 		if (err) return res.status(500).send(err);
-	// 		else res.send(result);
-	// 	});
-	// },
 	getProject: function (req, res, next) {
 		Project.find().then(function (Project) {
       if (err) {

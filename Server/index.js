@@ -8,7 +8,7 @@ var express      = require('express')
   , app          = express()
   , port         = process.env.PORT || 3000
 // Mongoose //
-  , mongoUri     = "mongodb://localhost:27017/sydsportfolio"
+   , mongoUri     = "mongodb://localhost:27017/sydsportfolio"
 // Refs //
   , stringsCtrl  = require('./strings/stringsCtrl.js')
   , projectsCtrl = require('./projects/projCtrl.js')
