@@ -2,11 +2,11 @@ angular.module('portfolio', ['ui.router'])
 
 	.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
 
-		$urlRouterProvider.otherwise('/welcome');
+		$urlRouterProvider.otherwise('/');
 
 		$stateProvider
-			.state('welcome', {
-				url: '/welcome',
+			.state('/', {
+				url: '/',
 				templateUrl: 'js/landing/landing.html',
 				controller: 'landingCtrl'
 			})

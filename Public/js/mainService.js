@@ -25,27 +25,32 @@ angular.module('portfolio').service('mainService', function($http) {
 ]
 
   this.bioTitle = {
-    string: "Finding my Voice"
+    string: "Finding My Voice"
   };
 
   this.p1 = {
-    string: "Article Link?"
+    string: "This is how I found my voice, and my passion telling stories",
+    link:"https://docs.google.com/document/d/18YPd3QMjvvs91iPfRJF8WLl0xigrLU82HyYQZKyAbHg/edit"
   };
 
   this.p2 = {
-    string: "Article Link?"
+    string: "* Daily universe article written by yours truly",
+    link:"http://universe.byu.edu/2013/05/09/becky-mackintosh-and-kristi-rodgerson-encouraging-praising-and-providing-help-for-our-teenagers/"
   };
 
   this.p3 = {
-    string:"Article Link?"
+    string:"* Local business story",
+    link:"https://docs.google.com/document/d/1dJcmjkgEOpXbUGh_SVgkJJbodAUqrtFGCXwamF9KCHk/edit"
   }
 
   this.p4 = {
-    string:"articles??"
+    string:"* Local cuisine",
+    link:"https://docs.google.com/document/d/1hyxZVM8DZDoUfj2_Td2vMfVAwuPPcnOJOpS7YeqWRCk/edit"
   };
 
   this.p5 = {
-    string: "articles..."
+    string: "* Stories untold",
+    link:"https://docs.google.com/document/d/1BAQ51GInkIurHJb-fvLJac2myAIXDlHj8j2gcoGqHb0/edit"
   };
 
 });
